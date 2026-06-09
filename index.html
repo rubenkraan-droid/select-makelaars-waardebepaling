@@ -318,49 +318,6 @@
     }
 
     /* ── Form section ── */
-    .form-section {
-      background: var(--navy);
-      padding: 80px 0;
-    }
-    .form-section .section-label { color: var(--gold-light); }
-    .form-section h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      color: var(--white);
-      margin-bottom: 12px;
-    }
-    .form-section .subtitle {
-      font-family: 'Arial', sans-serif;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 48px;
-      font-size: 1rem;
-    }
-    .form-wrapper {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 48px 40px;
-      max-width: 720px;
-      margin: 0 auto;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.3);
-    }
-
-    /* ─ Placeholder GHL embed ─ */
-    .ghl-placeholder {
-      background: var(--off-white);
-      border: 2px dashed var(--gold);
-      border-radius: 8px;
-      padding: 40px 20px;
-      text-align: center;
-      color: var(--text-light);
-      font-family: 'Arial', sans-serif;
-      font-size: 0.9rem;
-    }
-    .ghl-placeholder strong {
-      display: block;
-      color: var(--navy);
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-
     /* ── Footer ── */
     .footer {
       background: #0f1826;
@@ -378,7 +335,6 @@
 
     /* ── Responsive ── */
     @media (max-width: 600px) {
-      .form-wrapper { padding: 32px 20px; }
       .hero-content { padding: 60px 16px; }
       .steps { grid-template-columns: 1fr; }
     }
@@ -521,40 +477,6 @@
                  "Ik help u graag de beste prijs voor uw woning te realiseren."</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Formulier (GHL embed) ── -->
-  <section class="form-section" id="waardebepaling">
-    <div class="container">
-      <p class="section-label">Gratis &amp; vrijblijvend</p>
-      <h2>Vraag uw gratis waardebepaling aan</h2>
-      <p class="subtitle">Vul uw gegevens in — we sturen het rapport direct naar uw e-mailadres.</p>
-
-      <div class="form-wrapper">
-        <!--
-          ════════════════════════════════════════════════════
-          PLAK HIER UW GHL EMBED CODE
-          Vervang de onderstaande placeholder door de iframe
-          of snippet code uit GoHighLevel.
-
-          Voorbeeld:
-          <iframe
-            src="https://app.gohighlevel.com/widget/form/JOUW_FORM_ID"
-            style="width:100%;min-height:600px;border:none;"
-            scrolling="no"
-            id="ghl-form"
-          ></iframe>
-          ════════════════════════════════════════════════════
-        -->
-        <div class="ghl-placeholder">
-          <strong>GHL Formulier</strong>
-          Plak hier uw GoHighLevel embed code.<br />
-          Het formulier bevat: Naam*, Telefoonnummer*, E-mail*,
-          Adres woning, Grootte m², Bouwjaar, Foto's uploaden,
-          Eigen grond / pacht / huur, Verwachte verkoopprijs.
         </div>
       </div>
     </div>
