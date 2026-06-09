@@ -26,6 +26,18 @@
       color: var(--text);
       background: var(--white);
       line-height: 1.6;
+      width: 100%;
+      max-width: 100% !important;
+      overflow-x: hidden;
+    }
+    /* Break out of GHL container */
+    .ghl-fullwidth {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
     }
     h1, h2, h3 { line-height: 1.2; }
     a { color: inherit; text-decoration: none; }
@@ -344,7 +356,7 @@
 <body>
 
   <!-- ── Top bar ── -->
-  <header class="topbar">
+  <header class="topbar ghl-fullwidth">
     <div class="container inner">
       <div class="logo">
         <img src="https://rubenkraan-droid.github.io/select-makelaars-waardebepaling/logo-white.png" alt="Select Makelaars" style="height:72px;width:auto;" />
@@ -354,7 +366,7 @@
   </header>
 
   <!-- ── Hero ── -->
-  <section class="hero" id="top">
+  <section class="hero ghl-fullwidth" id="top">
     <div class="container">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-content">
@@ -371,7 +383,7 @@
   </section>
 
   <!-- ── USP strip ── -->
-  <div class="usp-strip">
+  <div class="usp-strip ghl-fullwidth">
     <div class="container">
       <ul class="usp-list">
         <li>Vrijblijvend</li>
@@ -383,7 +395,7 @@
   </div>
 
   <!-- ── Hoe het werkt ── -->
-  <section class="how">
+  <section class="how ghl-fullwidth">
     <div class="container">
       <p class="section-label">Zo simpel werkt het</p>
       <h2>In 3 stappen weet u wat uw woning waard is</h2>
@@ -408,7 +420,7 @@
   </section>
 
   <!-- ── Trust / makelaar ── -->
-  <section class="trust">
+  <section class="trust ghl-fullwidth">
     <div class="container">
       <div class="trust-inner">
         <div>
@@ -467,7 +479,7 @@
   </section>
 
   <!-- ── Footer ── -->
-  <footer class="footer">
+  <footer class="footer ghl-fullwidth">
     <div class="container">
       <span class="logo" style="justify-content:center"><img src="https://rubenkraan-droid.github.io/select-makelaars-waardebepaling/logo-white.png" alt="Select Makelaars" style="height:60px;width:auto;" /></span>
       <p>
