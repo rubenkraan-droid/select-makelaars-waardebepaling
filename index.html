@@ -253,7 +253,11 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 64px;
-      align-items: center;
+      align-items: stretch;
+    }
+    .trust-inner > div:first-child {
+      display: flex;
+      flex-direction: column;
     }
     @media (max-width: 700px) {
       .trust-inner { grid-template-columns: 1fr; }
@@ -310,22 +314,26 @@
     }
     .realtor-card {
       display: flex;
-      align-items: center;
-      gap: 16px;
+      align-items: stretch;
+      gap: 0;
       background: var(--off-white);
       border-radius: var(--radius);
-      padding: 20px;
-      margin-top: 32px;
+      padding: 0;
+      margin-top: 16px;
+      flex: 1;
+      overflow: hidden;
     }
     .realtor-photo {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--gold);
-      background: #ccc url('https://rubenkraan-droid.github.io/select-makelaars-waardebepaling/headshot%20Willem.png') center/cover;
+      width: 120px;
+      min-width: 120px;
+      border-radius: 0;
+      border: none;
+      border-right: 3px solid var(--gold);
+      background: #ccc url('https://rubenkraan-droid.github.io/select-makelaars-waardebepaling/headshot%20Willem.png') center top/cover;
       flex-shrink: 0;
+      align-self: stretch;
     }
+    .realtor-info { padding: 20px; }
     .realtor-info h4 { color: var(--navy); font-size: 1rem; margin-bottom: 4px; }
     .realtor-info p {
       font-family: 'Arial', sans-serif;
