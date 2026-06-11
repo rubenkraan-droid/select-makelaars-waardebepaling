@@ -333,12 +333,37 @@
       flex-shrink: 0;
       align-self: stretch;
     }
-    .realtor-info { padding: 20px; }
-    .realtor-info h4 { color: var(--navy); font-size: 1rem; margin-bottom: 4px; }
-    .realtor-info p {
+    .realtor-info {
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+    }
+    .realtor-info h4 {
+      color: var(--navy);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      letter-spacing: 0.3px;
+    }
+    .realtor-info .realtor-title {
       font-family: 'Arial', sans-serif;
       font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .realtor-info .realtor-quote {
+      font-family: 'Georgia', serif;
+      font-size: 0.95rem;
+      font-style: italic;
       color: var(--text-light);
+      line-height: 1.6;
+      border-left: 3px solid var(--gold);
+      padding-left: 12px;
       margin: 0;
     }
 
@@ -444,8 +469,8 @@
             <div class="realtor-photo" role="img" aria-label="Foto Willem van de Griend"></div>
             <div class="realtor-info">
               <h4>Willem van de Griend</h4>
-              <p>Makelaar – Select Makelaars<br>
-                 "Ik help u graag de beste prijs voor uw woning te realiseren."</p>
+              <p class="realtor-title">Makelaar – Select Makelaars</p>
+              <p class="realtor-quote">"Ik help u graag de beste prijs voor uw woning te realiseren."</p>
             </div>
           </div>
         </div>
