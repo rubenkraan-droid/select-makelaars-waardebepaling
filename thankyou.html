@@ -360,14 +360,23 @@
   </footer>
 
   <script>
-    // Lees adres uit URL-parameter en laad kaart
+    // Lees adres uit URL-parameters (GHL stuurt adresvelden los mee)
     const params = new URLSearchParams(window.location.search);
-    const adres = params.get('adres') || params.get('address') || params.get('woning_adres');
 
-    if (adres) {
+    // GHL address field met query key "address" geeft: address1, city, postal_code
+    const street     = params.get('address1')     || params.get('address[address1]') || '';
+    const city       = params.get('city')          || params.get('address[city]')     || '';
+    const postalCode = params.get('postal_code')   || params.get('address[postal_code]') || '';
+
+    // Fallback: enkelvoudig adresveld
+    const enkelAdres = params.get('adres') || params.get('address') || params.get('woning_adres') || '';
+
+    const adres = enkelAdres || [street, postalCode, city].filter(Boolean).join(' ');
+
+    if (adres.trim()) {
       const mapSection = document.getElementById('kaart');
-      const iframe = document.getElementById('map-iframe');
-      const titel = document.getElementById('map-adres-titel');
+      const iframe     = document.getElementById('map-iframe');
+      const titel      = document.getElementById('map-adres-titel');
 
       mapSection.style.display = 'block';
       titel.textContent = adres;
