@@ -416,7 +416,7 @@
           U ontvangt het rapport binnen 24 uur per e-mail — zonder gedoe,
           100% ontzorgd.
         </p>
-        <a href="#" class="btn" onclick="window.parent.scrollBy({top: window.parent.innerHeight, behavior: 'smooth'}); window.scrollBy({top: window.innerHeight, behavior: 'smooth'}); return false;">Vraag gratis waardebepaling aan</a>
+        <a href="#" class="btn" onclick="(function(){ var el = window.parent.document.getElementById('formulier'); if(el){ el.scrollIntoView({behavior:'smooth'}); } else { window.parent.scrollBy({top: window.parent.innerHeight, behavior:'smooth'}); } })(); return false;">Vraag gratis waardebepaling aan</a>
       </div>
     </div>
   </section>
